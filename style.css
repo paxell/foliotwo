@@ -247,6 +247,7 @@ header ul, footer ul li a {
 	/* Inner pages */
 	.work .span_3_of_12 {
 		width: 47.8%; 
+		min-height:460px;
 	}
 	.col:nth-child(3) { 
 		margin-left: 0;
@@ -273,13 +274,19 @@ header ul, footer ul li a {
 	}
 	.logo {
 		margin-left:2%;
+		height:80px;
+	}
+	.home header ul {
+		margin-top:1.4em;
 	}
 	.work {
 		border-bottom:none;
 	}
 	.work .col {
-		border-top:2px solid #66affb;
 		padding:0.8em 0;
+	}
+	.work .col, .home .works {
+		border-top:2px solid #66affb;
 	}
 	.works .col img {
 		margin:0.6em 0.4em 0 0.4em;
