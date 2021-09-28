@@ -1,0 +1,197 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Static to interactive - Portfolio 2021</title>
+
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+     <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=IBM+Plex+Serif:wght@300;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../../css/theme.css">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="../../js/theme.js"></script>
+
+  
+  
+
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+
+<div class='header'>
+  
+  <div class='nav-main'>
+    <ul>
+      
+        <!--
+
+-->
+
+<li >
+    <a href="../..">Home</a>
+</li>
+
+      
+        <!--
+
+-->
+
+  <li>
+    Case studies
+    <ul class='nav-child'>
+        
+            <!--
+
+-->
+
+<li class="active">
+    <a href="./">Static to interactive</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+    </ul>
+
+  </div>
+
+  
+    <div class='nav-shortcuts'>
+      
+        <a href="../.." title="Home">Previous</a>
+      
+      &nbsp;&nbsp;
+      
+        Next
+      
+    </div>
+  
+
+</div>
+
+<div class='container'>
+
+  <div class='content col-primary'>
+
+    
+      <h1 id="static-to-interactive-qagoma-map-2016">Static to interactive: <br />QAGOMA map 2016</h1>
+<p>Queensland Art Gallery / Gallery of Modern Art needed an interactive solution for wayfinding that showcased both of the gallery’s buildings. Previously, static images of each floor were provided on the website and up-to-date maps including exhibition information could only be found in brochures.</p>
+<p>An interactive map would gather data from the website calendar to automatically provide up-do date information on exhibitions.</p>
+<p>[image]</p>
+<h2 id="user-needs">User needs</h2>
+<p>The primary users would be current or future visitors to the gallery which was spread across two buildings, 5 minutes walk apart. Users commonly didn't know which of the two buildings was holding the exhibition they had come to see before arriving at the gallery.</p>
+<p>Other frequent users would be gallery services staff who could assist wayfinding in person by showing the maps to visitors on tablet devices.</p>
+<p>The map needed to show:</p>
+<ul>
+<li>Current exhibitions across both buildings on multiple floors</li>
+<li>Gallery services such as the research library and cafe</li>
+<li>Features of the buildings such as lifts and bathrooms</li>
+</ul>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li>The solution needed to be compatible with the gallery website’s layout and style guide</li>
+<li>All map assets needed to be stored in and retrieved from the gallery’s squizMatrix CMS platform</li>
+<li>Information about exhibitions and events was stored in JSON so ideally the map would be compatible with this</li>
+</ul>
+<h2 id="process">Process</h2>
+<ol>
+<li><a href="#requirement-gathering">Requirement gathering</a></li>
+<li><a href="#technical-investigation">Technical investigation</a></li>
+<li><a href="#mockups">Mockups</a></li>
+<li>Stakeholder feedback</li>
+<li>Interactive mockups</li>
+<li>Further feedback and approval</li>
+<li>CMS integration</li>
+<li>Publishing to live site</li>
+</ol>
+<h3 id="requirement-gathering">Requirement gathering</h3>
+<p>I spoke with various stakeholders to get the initial requirements for the interactive map.</p>
+<ul>
+<li>Highlighting exhibitions: The map pins and exhibition listing should update automatically from the exhibition calendar</li>
+<li>Gallery services: Services such as the gallery’s research library with links to their web pages should be accessible from the map</li>
+<li>Mobile friendly: The interface should adapt for use on mobile devices</li>
+<li>Accessible: needed to be high contrast and zoomable</li>
+</ul>
+<h3 id="technical-investigation">Technical investigation</h3>
+<p>I selected <a href="https://leafletjs.com/">Leaflet.js</a> as a library for the map.</p>
+<p>I created custom map tiles from PDFs, mapped out the coordinates of each building feature and converted them to JSON to show each feature as a pin with a toolip.</p>
+<p>The website JSON was drawn in to populate the exhibition information and images into the tooltips.</p>
+<h3 id="mockups">Mockups</h3>
+<p>[image]</p>
+<p>[image]</p>
+<h2 id="lessons-learnt">Lessons learnt</h2>
+<p><strong>Performance:</strong> the interactive mockup was not a good indication of performance, retrieving assets through the CMS added to load time, especially the first load of the map.</p>
+<p><strong>JSON configuration:</strong> this format worked really well with the existing site information and also to store the map data. It should be easy to modify if and when the layout of either gallery changes.</p>
+<p><strong>Designing for re-use:</strong> The same map engine was subsequently used for an internal app for fire safety training. A more detailed version of the maps were used with pins to show the locations of all fire safety equipment and fire exits.</p>
+<p>The map is still in use <a href="https://www.qagoma.qld.gov.au/visit/maps">on the QAGOMA website</a>.</p>
+    
+
+  </div>
+
+  <div class='nav-page col-secondary'>
+
+    <ul>
+      
+          <li><a href="#static-to-interactive-qagoma-map-2016">Static to interactive: QAGOMA map 2016</a></li>
+          
+              <li><a href="#user-needs">User needs</a></li>
+          
+              <li><a href="#constraints">Constraints</a></li>
+          
+              <li><a href="#process">Process</a></li>
+          
+              <li><a href="#lessons-learnt">Lessons learnt</a></li>
+          
+      
+    </ul>
+  </div>
+
+</div>
+
+<div class='footer'>
+  <div class='footer-copy'>
+    &copy; 2021 Eleanor Paxman
+  </div>
+
+  <ul class='nav-footer'>
+    <li><a href='http://lnkd.in/QanV_g'>LinkedIn</a></li>
+    <li><a href='https://github.com/paxell'>GitHub</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

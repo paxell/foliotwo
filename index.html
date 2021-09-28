@@ -1,155 +1,200 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
 <!DOCTYPE html>
-<html>
-
 <head>
-	<title>Home | E Paxman Design</title>
-	<link rel="stylesheet" href="style.css" />
-	<link rel="icon" type="image/png" href="https://i.imgur.com/reqrR9B.png">
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans:700|Merriweather:300,300italic' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Home - Portfolio 2021</title>
+
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+     <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=IBM+Plex+Serif:wght@300;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/theme.css">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="js/theme.js"></script>
+
+  
+  
+
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="search/main.js"></script>
+  
+
 </head>
 
-<body class="home">
+<body>
 
-<header>
-	<div class="container">
-		<a href="index.html"><img class="logo" src="https://i.imgur.com/GNEvsiV.png" /></a>
-		<ul>
-			<li><a href="index.html">About</a></li>
-			<li><a href="index.html#about">Work</a></li>
-			<li><a href="mailto:e.paxman.design@gmail.com?subject=WebsiteEnquiry">Contact</a></li>
-			<!--<li><a href="#about"Blog</a></li>-->
-		</ul>
-		<div class="clear"></div>
-	</div>
-</header>
+<div class='header'>
+  
+  <div class='nav-main'>
+    <ul>
+      
+        <!--
 
-<div class="container content">
-	<div class="section group about" id="about">
-		<div class="col span_3_of_12">
-			<h2>About</h2>
-		</div>
-		<div class="col span_9_of_12">
-			<p class="highlight">I create and adapt experiences that put the user first.</p>
-			<p>I feel at home with interface design, front-end web development, game design, print design, branding and illustration. If you think my skills would complement your organisation, please <a href="mailto:e.paxman.design@gmail.com?subject=WebsiteEnquiry">contact me</a>.</p>
-		</div>
-	</div>
+-->
 
-	<h2 class="full" id="work">Work</h2>
+<li class="active">
+    <a href=".">Home</a>
+</li>
 
-	<div class="section group">
-		
-		<div class="col span_6_of_12 works">
-			<div class="section group">
-				<div class="col span_6_of_12">
-					<a href="maps.html"><img src="https://i.imgur.com/WpcHVGs.jpg" /></a>
-				</div>
-				<div class="col span_6_of_12 blurb">
-					<h3><a href="maps.html">Interactive maps</a></h3>
-					<h4>Queensland Art Gallery | Gallery of Modern Art</h4>
-					<p class="tags">Javascript, Leaflet JS, JSON, maps</p>
-				</div>
-			</div>
-		</div>
+      
+        <!--
 
-		<div class="col span_6_of_12 works">
-			<div class="section group">
-				<div class="col span_6_of_12">
-					<a href="number.html"><img src="https://i.imgur.com/zbH80lf.jpg" /></a>
-				</div>
-				<div class="col span_6_of_12 blurb">
-					<h3><a href="number.html">Packaging design</a></h3>
-					<h4>ORIGO Education</h4>
-					<p class="tags">packaging, logo, product design, graphic design</p>
-				</div>
-			</div>
-		</div>
+-->
 
-	</div>
+  <li>
+    Case studies
+    <ul class='nav-child'>
+        
+            <!--
 
-	<div class="section group">
-		
-		<div class="col span_6_of_12 works">
-			<div class="section group">
-				<div class="col span_6_of_12">
-					<a href="basq.html"><img src="https://i.imgur.com/ulTZwXC.jpg" /></a>
-				</div>
-				<div class="col span_6_of_12 blurb">
-					<h3><a href="basq.html">Web Development</a></h3>
-					<h4>Botanical Art Queensland</h4>
-					<p class="tags">Drupal, web design, web development</p>
-				</div>
-			</div>
-		</div>
+-->
 
-		<div class="col span_6_of_12 works">
-			<div class="section group">
-				<div class="col span_6_of_12">
-					<a href="jagged.html"><img src="https://i.imgur.com/XWDv8ZJ.jpg" /></a>
-				</div>
-				<div class="col span_6_of_12 blurb">
-					<h3><a href="jagged.html">Branding</a></h3>
-					<h4>Jagged Hair and Beauty</h4>
-					<p class="tags">graphic design, logo, signage, stationery</p>
-				</div>
-			</div>
-		</div>
+<li >
+    <a href="case-studies/static-to-interactive/">Static to interactive</a>
+</li>
 
-	</div>
+        
+    </ul>
+  </li>
 
-	<div class="section group">
+      
+    </ul>
 
-		<div class="col span_6_of_12 works">
-			<div class="section group">
-				<div class="col span_6_of_12">
-					<a href="game.html"><img src="https://i.imgur.com/nrpPyzx.png" /></a>
-				</div>
-				<div class="col span_6_of_12">
-					<h3><a href="game.html">Game design</a></h3>
-					<h4>Various projects</h4>
-					<p class="tags">game development, game design, illustration</p>
-				</div>
-			</div>
-		</div>		
+  </div>
 
-		<div class="col span_6_of_12 works">
-			<div class="section group">
-				<div class="col span_6_of_12">
-					<a href="lettering.html"><img src="https://i.imgur.com/NWpHs0f.gif" /></a>
-				</div>
-				<div class="col span_6_of_12">
-					<h3><a href="lettering.html">T-shirt design</a></h3>
-					<h4>Various projects</h4>
-					<p class="tags">hand lettering, illustration</p>
-				</div>
-			</div>
-		</div>
-			
-	</div>
-			
+  
+    <div class='nav-shortcuts'>
+      
+      Previous
+      
+      &nbsp;&nbsp;
+      
+        <a href="case-studies/static-to-interactive/" title="Static to interactive"/>Next</a>
+      
+    </div>
+  
+
 </div>
 
-<footer>
-	<div class="container">
-		<div class="section group">
-			<div class="col span_6_of_12">
-				&copy; 2017 Eleanor Paxman
-			</div>
-			<div class="col span_6_of_12">	
-				<ul>
-					<li><a href="https://github.com/paxell" target="_blank">github</a></li>
-					<li><a href="http://lnkd.in/QanV_g" target="_blank">linkedin</a></li>
-					<li><a href="http://instagram.com/paxelea" target="_blank">instagram</a></li>
-					<!--<li><a>blog</a></li>-->
-					<li><a href="mailto:e.paxman.design@gmail.com?subject=WebsiteEnquiry">contact</a></li>
-					<li><a href="index.html#about">work</a></li>
-					<li><a href="index.html">about</a></li>
-				</ul>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
-</footer>
+<div class='container'>
+
+  <div class='content col-primary'>
+
+    
+      <h1 id="eleanor-paxman-product-designer">Eleanor Paxman: <br />Product Designer</h1>
+<p>In my 12+ years of experience in a broad range of design roles and contexts, my career expertise could be summarised as this: evolving products. </p>
+<p>My expertise in product design for data-driven web applications draws from a wide range of experiences in the design of games, mobile apps, logos and branding.</p>
+<p>I work with product managers and researchers, leading a design team to take user needs and propose solutions for them: wireframe, prototype, test, iterate, repeat. I work with developers and quality assurance until the user need is satisfied within the current constraints.</p>
+<p>Although products can be released, I understand they are never 'done'. A user needs the products they use to evolve with them as technology marches forward and their expectations change.</p>
+<h2 id="areas-of-strength">Areas of strength</h2>
+<ul>
+<li><strong>Product strategy:</strong> from print to screen, desktop to mobile, native desktop to cloud application, I've spent a lot of time figuring out how to take a product from one stage of it's life cycle to another.</li>
+<li><strong>Managing constraints:</strong> even considering legacy architecture, release schedules and budget constraints, there are always ways to improve a product from micro-interactions to macro re-platforming.</li>
+<li><strong>Improving processes:</strong> applying the same agile principles of product development to the processes we rely on to keep things moving in the wider business, and always re-evaluating: did that work?</li>
+<li><strong>Connecting silos:</strong> highlighting common goals while appreciating the individual contributions of geographically distributed interdisciplinary team members (say that five times fast).</li>
+</ul>
+<h2 id="areas-of-interest">Areas of interest</h2>
+<ul>
+<li><strong>Business needs:</strong> Squaring user needs with business needs is a fine balance. As designers we want our users to have everything, as a business we need to ask ourselves: what adds the most value?</li>
+<li><strong>Designing automation:</strong> Products should make themselves (almost) redundant so that users spend less time working with the app and let the app work for them. I have only just begun to scratch the surface here.</li>
+<li><strong>Leadership:</strong> I've implemented recruitment processes which improved hiring. I've co-ordinated a team of designers and supervised junior designers but I'm always learning more about how best to lead a design team.</li>
+</ul>
+<h2 id="active-skills-and-tools">Active skills and tools</h2>
+<ul>
+<li>User flows, wireframing and prototyping</li>
+<li>Mockups and pattern libraries with design tools such as Sketch</li>
+<li>Designing workshops with collaboration tools such as Miro</li>
+<li>Styling with CSS and CSS preprocessors</li>
+<li>JavaScript and common libraries such as React</li>
+<li>Agile software methodology</li>
+<li>Version control using Git</li>
+<li>Adobe CC: Illustrator, Photoshop, InDesign</li>
+</ul>
+<h2 id="retired-skills-and-tools">Retired skills and tools</h2>
+<p>Why would I include these? In my career evolving products from one stage to another, I have used many tools, some of which I no longer use but have taught me a lot along the way.</p>
+<ul>
+<li>Hand coded HTML microsites and emails</li>
+<li>CMS building and theming using Drupal and Wordpress</li>
+<li>Interaction and animation using Flash and ActionScript</li>
+<li>Print and packaging design</li>
+</ul>
+<h2 id="case-studies">Case studies</h2>
+<div class='nav-images'>
+    <div class='nav-image-item'>
+        <a href='case-studies/static-to-interactive'>
+            Static to interactive: QAGOMA Map 2016
+            <img title='static to interactive' alt='static to interactive' src='case-studies/img/4-goma/final-1.jpg' />
+        </a>
+    </div>
+</div>
+
+<h2 id="contact-me">Contact me</h2>
+<p>I am currently based in Brisbane, Australia and available to work remotely. To get in touch with me about opportunities, please <a href="http://lnkd.in/QanV_g">contact me via Linkedin</a>.</p>
+    
+
+  </div>
+
+  <div class='nav-page col-secondary'>
+
+    <ul>
+      
+          <li><a href="#eleanor-paxman-product-designer">Eleanor Paxman: Product Designer</a></li>
+          
+              <li><a href="#areas-of-strength">Areas of strength</a></li>
+          
+              <li><a href="#areas-of-interest">Areas of interest</a></li>
+          
+              <li><a href="#active-skills-and-tools">Active skills and tools</a></li>
+          
+              <li><a href="#retired-skills-and-tools">Retired skills and tools</a></li>
+          
+              <li><a href="#case-studies">Case studies</a></li>
+          
+              <li><a href="#contact-me">Contact me</a></li>
+          
+      
+    </ul>
+  </div>
+
+</div>
+
+<div class='footer'>
+  <div class='footer-copy'>
+    &copy; 2021 Eleanor Paxman
+  </div>
+
+  <ul class='nav-footer'>
+    <li><a href='http://lnkd.in/QanV_g'>LinkedIn</a></li>
+    <li><a href='https://github.com/paxell'>GitHub</a></li>
+  </ul>
+</div>
 
 </body>
 </html>
-
