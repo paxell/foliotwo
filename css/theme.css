@@ -29,12 +29,16 @@ h1, h2, h3, .header, .nav-images, .nav-page, .footer-nav {
     font-weight: 500;
 }
 
-a {
+h1, h2, h3 {
+    color: #F19187;
+}
+
+a, a h3 {
     color: #357C8C;
 }
 
-h1, h2, h3 {
-    color: #F19187;
+a img:hover {
+    border-color: #357C8C;
 }
 
 a:hover {
@@ -108,7 +112,13 @@ h2 {
     margin-bottom: 0.4rem;
 }
 
-.content img {
+/* Image captions */
+em {
+    display: block;
+    padding: 0.4rem;
+}
+
+.content img, em {
     max-width: 100%;
     border: 1px solid #7F7F7F;
 }

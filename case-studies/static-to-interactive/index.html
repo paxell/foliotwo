@@ -111,7 +111,8 @@
       <h1 id="static-to-interactive-qagoma-map-2016">Static to interactive: <br />QAGOMA map 2016</h1>
 <p>Queensland Art Gallery / Gallery of Modern Art needed an interactive solution for wayfinding that showcased both of the gallery’s buildings. Previously, static images of each floor were provided on the website and up-to-date maps including exhibition information could only be found in brochures.</p>
 <p>An interactive map would gather data from the website calendar to automatically provide up-do date information on exhibitions.</p>
-<p><img alt="map in use on an iPad" src="https://imgur.com/a/nYqy4JI" /></p>
+<p><img alt="map in use on an iPad" src="https://i.imgur.com/W86fk4Z.jpg" />
+<em>Map in use on an iPad</em></p>
 <h2 id="user-needs">User needs</h2>
 <p>The primary users would be current or future visitors to the gallery which was spread across two buildings, 5 minutes walk apart. Users commonly didn't know which of the two buildings was holding the exhibition they had come to see before arriving at the gallery.</p>
 <p>Other frequent users would be gallery services staff who could assist wayfinding in person by showing the maps to visitors on tablet devices.</p>
@@ -146,13 +147,16 @@
 <li>Mobile friendly: The interface should adapt for use on mobile devices</li>
 <li>Accessible: needed to be high contrast and zoomable</li>
 </ul>
+<p><img alt="initial sketch" src="https://i.imgur.com/uGEw5KB.jpg" />
+<em>Initial sketch</em></p>
 <h3 id="technical-investigation">Technical investigation</h3>
 <p>I selected <a href="https://leafletjs.com/">Leaflet.js</a> as a library for the map.</p>
 <p>I created custom map tiles from PDFs, mapped out the coordinates of each building feature and converted them to JSON to show each feature as a pin with a toolip.</p>
 <p>The website JSON was drawn in to populate the exhibition information and images into the tooltips.</p>
-<h3 id="mockups">Mockups</h3>
-<p>[image]</p>
-<p>[image]</p>
+<h3 id="interactive-mockups">Interactive mockups</h3>
+<p>I produced interactive mockups for final approval and testing. Many tweaks were made to optimise the user experience, especially on mobile.</p>
+<p><img alt="Interactive mockup" src="https://i.imgur.com/fhW7YtE.png" />
+<em>Interactive mockup</em></p>
 <h2 id="lessons-learnt">Lessons learnt</h2>
 <p><strong>Performance:</strong> the interactive mockup was not a good indication of performance, retrieving assets through the CMS added to load time, especially the first load of the map.</p>
 <p><strong>JSON configuration:</strong> this format worked really well with the existing site information and also to store the map data. It should be easy to modify if and when the layout of either gallery changes.</p>
