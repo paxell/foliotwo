@@ -74,11 +74,11 @@ h2 {
 }
 
 .nav-main {
-    width: 65%;
+    width: 70%;
 }
 
 .nav-shortcuts {
-    width: 35%;
+    width: 30%;
 }
 
 .nav-main ul, .nav-footer {
@@ -206,7 +206,7 @@ em {
     }
 
     .col-primary {
-        width:100%;
+        width: 100%;
         padding: 2rem 0;
     }
 
