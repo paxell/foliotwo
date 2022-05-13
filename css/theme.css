@@ -38,10 +38,6 @@ a, a h3 {
     color: #357C8C;
 }
 
-a img:hover {
-    border-color: #357C8C;
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -130,6 +126,24 @@ em {
     border: 1px solid #7F7F7F;
 }
 
+    .content a img {
+        border-color: #357C8C;
+    }
+
+        .content a img:hover {
+            border-color: #F19187;
+        }
+
+.gallery {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+    .gallery .item {
+        max-width: 48%;
+    }
+
 .nav-main, .nav-shortcuts {
     padding: 1rem 2rem;
 }
@@ -156,12 +170,17 @@ em {
             border: 1px solid #63D7DA;
         }
 
+        .nav-main ul.nav-child li {
+            padding: 0.4rem 0;
+        }
+
         .nav-main ul li:hover {
             cursor: pointer;
         }
 
         /* ... Until hovering on the parent item */
-        .nav-main ul li:hover .nav-child {
+        .nav-main ul li:hover .nav-child, .nav-child:hover {
+            position: absolute;
             display: block;
             background: #fff;
             z-index: 999;
@@ -208,6 +227,10 @@ em {
     .col-primary {
         width: 100%;
         padding: 2rem 0;
+    }
+
+    .gallery .item {
+        max-width: 90%;
     }
 
     .nav-main, .nav-shortcuts, .footer-copy, .nav-footer {

@@ -1,0 +1,277 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>Evolution of roles - Portfolio 2022</title>
+
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+     <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=IBM+Plex+Serif:wght@300;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../../css/theme.css">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="../../js/theme.js"></script>
+
+  
+  
+
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../search/main.js"></script>
+  
+
+</head>
+
+<body>
+
+<div class='header'>
+  
+  <div class='nav-main'>
+    <ul>
+      
+        <!--
+
+-->
+
+<li >
+    <a href="../..">Home</a>
+</li>
+
+      
+        <!--
+
+-->
+
+  <li>
+    Work
+    <ul class='nav-child'>
+        
+            <!--
+
+-->
+
+<li class="active">
+    <a href="./">Evolution of roles</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li >
+    <a href="../static-to-interactive/">Static to interactive</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li >
+    <a href="../love-reef/">Love reef</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        <!--
+
+-->
+
+<li >
+    <a href="../../gallery/">Gallery</a>
+</li>
+
+      
+    </ul>
+
+  </div>
+
+  
+    <div class='nav-shortcuts'>
+      
+        <a href="../.." title="Home">&#8592;</a>
+      
+      &nbsp;&nbsp;
+      
+        <a href="../static-to-interactive/" title="Static to interactive"/>&#8594;</a>
+      
+    </div>
+  
+
+</div>
+
+<div class='container'>
+
+  <div class='content col-primary'>
+
+    
+      <h1 id="evolution-of-roles-retain-cloud-enterprise">Evolution of roles: <br />Retain Cloud enterprise</h1>
+<p>A legacy product of 20+ years of age was replatformed and redesigned from on-premise to cloud SaaS.</p>
+<p>The initial 'MVP' was a mammoth project spanning almost two years and involving dozens of people: Back and front-end developers, quality assurance, DevOps, technical authors, UX designers and researchers.</p>
+<p>Then we moved to the next phase of development: implementing 'enterprise' features.</p>
+<p>I've decided to zoom in on one enterprise featureset I designed as part of a team.</p>
+<h2 id="user-needs">User needs</h2>
+<p>The core functionality of the product is to assign resources (usually people) to jobs (also known as projects or matters) as bookings.</p>
+<p>The fundamental need for this featureset was to create a precursor to a booking. Where a booking could represent a 'final' commitment to work, there are various reasons why a booking could not yet be finalised, needing the precursor step:</p>
+<ol>
+<li>Several options or groups of options for bookings might need to be compared before finalising (known as scenarios)</li>
+<li>Depending on the governance of the organisation, the user might not have permission to create a booking but requests one for someone else to approve (known as booking requests)</li>
+<li>Groups of resources need to be found based on sets of criteria, where one user type creates requests, and another creates the resulting bookings (known as team requests or demand capture)</li>
+</ol>
+<p>In the legacy platform these 3 journeys were implemented as distinct features, sets of features, or separate areas of the application. It was clear to me that not all of these features could be developed in our time frame, and in any case, there was plenty of overlap between them.</p>
+<h2 id="constraints">Constraints</h2>
+<p>We determined that like every booking, every role should be associated with a job assigned and proposed that the new features for roles should live within the 'Jobs management' tab of the application, although this was later expanded so that roles could also appear in a graphical 'calendar view'.</p>
+<p>This featureset and others were developed as part of a funding round within our larger organisation, so we were constrained by a hard deadline at the end of which we had to demonstrate a range of features including this featureset. </p>
+<h2 id="process">Process</h2>
+<ol>
+<li>Consolidation</li>
+<li>Workflow mapping</li>
+<li>User testing</li>
+<li>Feature prioritisation</li>
+<li>Component mapping</li>
+<li>Design process improvements</li>
+<li>Start of development</li>
+<li>Quality assurance</li>
+<li>Release</li>
+</ol>
+<h3 id="1-consolidation">1. Consolidation</h3>
+<p>I proposed a way in which these needs could be combined into one new entity: a role, which could be grouped with other roles but each role would have its own status.</p>
+<p>I created an overview including flow charts to help determine whether all or most of the functionality of several legacy features could be simplified into one 'master' process using Miro.</p>
+<p><img alt="consolidation" src="https://i.ibb.co/TPwpm2K/overview.png" />
+<em>Overview in Miro</em></p>
+<p>The overview includes the following details:</p>
+<ul>
+<li>Actions that will be required at each step</li>
+<li>Suggested workflow options involving actors (user groups with different permissions)</li>
+<li>A proposed rough entity relationship diagram for the database architecture of roles</li>
+</ul>
+<p><img alt="entity relationship" src="https://i.ibb.co/yp3yzGh/ER.png" />
+<em>ER diagram detail in Miro</em></p>
+<p>With the entity relationship diagram I showed how a role could be related to other entities in the application in order to meet all the needs satisfied by the legacy features:</p>
+<ul>
+<li>Job as a parent</li>
+<li>Group as a parent: through the group it could be related to other roles</li>
+<li>Resources: various linkages to do with user types and assignment</li>
+<li>Bookings: a role would be a predecessor of a booking</li>
+</ul>
+<h3 id="2-workflow-mapping">2. Workflow mapping</h3>
+<p>In a follow up exercise I looked at the workflow in more detail, zooming in on actions that could be performed and corresponding screens in the application to steps in the workflow. Actions that could be performed would be determined by the user type or 'Actor':</p>
+<ul>
+<li>Requester: asks for a role to be made into a booking</li>
+<li>Planner: creates the booking</li>
+</ul>
+<p><img alt="workflow mapping" src="https://i.ibb.co/7VdS21f/workflow.png" />
+<em>Workflow mapping in Miro</em></p>
+<h3 id="3-user-testing">3. User testing</h3>
+<p>High fidelity screenshots which had previously been tested under the theme of 'scenarios' were adapted to the proposed workflow by the team.</p>
+<p><img alt="prototype" src="https://i.ibb.co/vj3wqZ0/prototype.png" />
+<em>Prototype in Sketch</em></p>
+<p>Participants were screened and shown a different prototype workflow depending on whether they fit the 'Requester' or 'Planner' persona.</p>
+<p>The user testing lead us to streamline the navigation of the featureset by tweaking UI copy, moving buttons to more expected locations, and improving the visual hierarchy of items.</p>
+<h3 id="4-feature-prioritisation">4. Feature prioritisation</h3>
+<p>After consolidating the original features together, we needed to split them apart in an order and size that made sense for development and testing:</p>
+<ol>
+<li>Create and edit</li>
+<li>Contextual information</li>
+<li>Workflow</li>
+<li>Actors </li>
+</ol>
+<p><strong>Contextual information:</strong> This is the data surrounding roles, some coming from calculated fields to determine e.g. the cost and revenue of roles. Another example of calculated data would be comparing roles with the assigned resource's existing bookings.</p>
+<p><strong>Workflow:</strong> This is about the stages or statuses a role moves through from a draft to a completion, the creation of a live booking.</p>
+<p><strong>Actors:</strong> This introduced the separation of permissions for creating and completing roles, with associated new role statuses like 'requested' and 'rejected'.</p>
+<h3 id="5-component-mapping">5. Component mapping</h3>
+<p>To assist developers, the team mapped out all components that would need to be added to our existing component library by breaking down a new page design into its component elements and supplying styling details needed for implementation.</p>
+<p>We also provided descriptions for components which would eventually be incorporated into the live React Storybook component library. Our visual reference within the design team, a Sketch style library, was also updated.</p>
+<p><img alt="component mapping" src="https://i.ibb.co/mNXHx1k/components.png" />
+<em>Component mapping in Miro</em></p>
+<h3 id="6-design-process-improvements">6. Design process improvements</h3>
+<p>The final design artefacts we created for developers and QAs referred to were markdown files with a combination of description and images to describe new UI elements and interactions.</p>
+<p>Originally designers wrote text descriptions on each feature, but over time this became cumbersome for the teams, in particular QA who needed to be able to easily refer to the descriptions of already implemented features to check for regression. It was also difficult to keep track of feedback and follow up questions on designs.</p>
+<p>Incorporating feedback from the team, I migrated the design documents for this featureset to a new wiki of markdown files stored in git. The git process, in particular pull requests, allowed us to capture feedback from the team and go through a formalised approval process by development and QA before a design document was 'live'.</p>
+<p>Design documents, originally describing the entire featureset, became more standalone to streamline the development of each individual feature and migrated to a new process to make them easier to read and manage: a set of wiki pages stored in git.</p>
+<p><img alt="design wiki" src="https://i.ibb.co/s6mwGqS/wiki.png" />
+<em>Design wiki page in Azure DevOps</em></p>
+<h3 id="release">Release</h3>
+<p>Previous releases had been heralded with very dry 'release notes' type emails to clients. I suggested that we develop an illustration style and library to produce simple illustrations to give users a graphical overview of new features. </p>
+<p><img alt="illustration actors" src="https://i.ibb.co/51HbNkM/illustration-actors.png" />
+<em>Release illustration for actors</em></p>
+<p><img alt="UI" src="https://i.ibb.co/RQvnC4s/UI.png" />
+<em>UI for editing a group of roles</em></p>
+<p>User testing doesn't stop at the release: further user testing will be conducted ahead of the design and development of complementary features to this featureset.</p>
+<h2 id="lessons-learnt">Lessons learnt</h2>
+<p><strong>Error handling:</strong> During the quality assurance phase, many questions came up around the topic of error handling. Although we had a basic framework for handling errors, it was not granular enough to catch differences between issues with concurrent user editing and lack of security permissions, for instance. Additionally, the user friendliness of the saving mechanism for a group of roles, while some actions such as a status change can be completed independently, needs further work.</p>
+<p><strong>Ease of navigation:</strong> The functionality for roles added two layers of navigation into the application. Although our URL handling meant that you could get directly to the role group with a link, other methods e.g. through context and drop-down menus were perhaps unnecessarily slow, requiring too many steps.</p>
+<p><strong>Agile vs waterfall:</strong> Working to a deadline where we were committed to developing certain features meant that we were not very flexible when it came to incorporating the results of user testing or responding to any other client suggestions or frustrations along the way. It also meant that instead of our original goal of many small releases, we had several very large and complex releases. We resolved to work differently for future releases.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>The next release would work towards showing roles in the plans page, a graphical calendar view.</p>
+<p><img alt="illustration roles in plans" src="https://i.ibb.co/GpvGcWB/illustration-plans.png" />
+<em>Release illustration for roles in the plans page</em></p>
+    
+
+  </div>
+
+  <div class='nav-page col-secondary'>
+
+    <ul>
+      
+          <li><a href="#evolution-of-roles-retain-cloud-enterprise">Evolution of roles: Retain Cloud enterprise</a></li>
+          
+              <li><a href="#user-needs">User needs</a></li>
+          
+              <li><a href="#constraints">Constraints</a></li>
+          
+              <li><a href="#process">Process</a></li>
+          
+              <li><a href="#lessons-learnt">Lessons learnt</a></li>
+          
+              <li><a href="#next-steps">Next steps</a></li>
+          
+      
+    </ul>
+  </div>
+
+</div>
+
+<div class='footer'>
+  <div class='footer-copy'>
+    &copy; 2022 Eleanor Paxman
+  </div>
+
+  <ul class='nav-footer'>
+    <li><a href='http://lnkd.in/QanV_g'>LinkedIn</a></li>
+    <li><a href='https://github.com/paxell'>GitHub</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
