@@ -44,12 +44,14 @@ a:hover {
 
 h1 {
     margin: 0 0 3rem 0;
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
 }
 
 h2 {
     margin: 1.6rem 0 1.2rem 0;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
 }
 
 .active a, strong {
@@ -60,7 +62,7 @@ h2 {
 /* Grid */
 
 .container, .header, .footer {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
 }
@@ -69,8 +71,8 @@ h2 {
     width: 50%;
 }
 
-.nav-main {
-    width: 70%;
+.nav-main, .col-primary {
+    width: 75%;
 }
 
 .nav-shortcuts {
@@ -86,12 +88,8 @@ h2 {
     padding: 2rem;
 }
 
-.col-primary {
-    width: 70%;
-}
-
 .col-secondary {
-    width: 30%;
+    width: 25%;
 }
 
 /* Layout */
